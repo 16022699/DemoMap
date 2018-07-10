@@ -10,6 +10,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
                 LatLng poi_CausewayPoint = new LatLng(1.436065, 103.786263);
                 map.moveCamera(CameraUpdateFactory.newLatLngZoom(poi_CausewayPoint,
                         15));
+
+                UiSettings ui = map.getUiSettings();
+                ui.setCompassEnabled(true);
+
+                UiSettings us = map.getUiSettings();
+                us.setZoomControlsEnabled(true);
+
+
+
 
             }
         });
